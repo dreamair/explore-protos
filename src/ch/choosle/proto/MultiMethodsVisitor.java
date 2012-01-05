@@ -299,6 +299,18 @@ public class MultiMethodsVisitor implements ResultProvider {
 			m((Type0) obj);
 		else if (obj instanceof Float)
 			m((Type0) obj);
+		else if (obj instanceof Method)
+			m((Type0) obj);
+		else if (obj instanceof Boolean)
+			m((Type0) obj);
+		else if (obj instanceof Double)
+			m((Type0) obj);
+		else if (obj instanceof Float)
+			m((Type0) obj);
+		else if (obj instanceof Method)
+			m((Type0) obj);
+		else if (obj instanceof Boolean)
+			m((Type0) obj);
 
 		else if (obj instanceof Type0)
 			m((Type0) obj);
@@ -431,6 +443,48 @@ map: 21, 20M in 1773ms (41MB) 0
 map2: 21, 20M in 1779ms (41MB) 0
 map3: 21, 20M in 1557ms (41MB) 0
 map4: 21, 20M in 583ms (0MB) 0
+visit: 21, 20M in 205ms (0MB) 0
+
+// ~40 dummy instanceof checks
+Sun Microsystems Inc. 1.6.0_25 (Java HotSpot(TM) 64-Bit Server VM 20.0-b11)
+Args: [-Xms512m, -Xmx512m, -Xbatch, -Xnoclassgc, -Xincgc, -Dfile.encoding=UTF-8]
+Windows 7 (6.1 amd64)
+ch.choosle.proto.Protocol (Thu Jan 05 10:34:25 CET 2012)
+_direct: 21, 20M in 7ms (0MB) 0
+_cast: 21, 20M in 16ms (0MB) 0
+_invoke: 21, 20M in 954ms (41MB) 0
+instOf: 21, 20M in 592ms (0MB) 0
+cast5: 21, 20M in 642ms (0MB) 0
+cast6: 21, 20M in 261ms (0MB) 0
+map4: 21, 20M in 582ms (0MB) 0
+visit: 21, 20M in 204ms (0MB) 0
+
+// ~20 dummy instanceof checks
+Sun Microsystems Inc. 1.6.0_25 (Java HotSpot(TM) 64-Bit Server VM 20.0-b11)
+Args: [-Xms512m, -Xmx512m, -Xbatch, -Xnoclassgc, -Xincgc, -Dfile.encoding=UTF-8]
+Windows 7 (6.1 amd64)
+ch.choosle.proto.Protocol (Thu Jan 05 10:37:37 CET 2012)
+_direct: 21, 20M in 7ms (0MB) 0
+_cast: 21, 20M in 16ms (0MB) 0
+_invoke: 21, 20M in 953ms (41MB) 0
+instOf: 21, 20M in 469ms (0MB) 0
+cast5: 21, 20M in 642ms (0MB) 0
+cast6: 21, 20M in 261ms (0MB) 0
+map4: 21, 20M in 583ms (0MB) 0
+visit: 21, 20M in 205ms (0MB) 0
+
+// ~10 dummy instanceof checks
+Sun Microsystems Inc. 1.6.0_25 (Java HotSpot(TM) 64-Bit Server VM 20.0-b11)
+Args: [-Xms512m, -Xmx512m, -Xbatch, -Xnoclassgc, -Xincgc, -Dfile.encoding=UTF-8]
+Windows 7 (6.1 amd64)
+ch.choosle.proto.Protocol (Thu Jan 05 11:16:07 CET 2012)
+_direct: 21, 20M in 7ms (0MB) 0
+_cast: 21, 20M in 17ms (0MB) 0
+_invoke: 21, 20M in 964ms (41MB) 0
+instOf: 21, 20M in 285ms (0MB) 0
+cast5: 21, 20M in 643ms (0MB) 0
+cast6: 21, 20M in 261ms (0MB) 0
+map4: 21, 20M in 584ms (0MB) 0
 visit: 21, 20M in 205ms (0MB) 0
 
 */
